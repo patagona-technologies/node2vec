@@ -19,7 +19,7 @@ docker run --rm -v ${PWD}:/node2vec\
                 -i -t node2vec:latest /bin/bash\
                 -c "cd /node2vec;\
                     python src/main.py --input graph/karate.edgelist\
-                                       --output emb/karate.emd \
+                                       --output emb/karate.emd\
                                        --dimensions 128\
                                        --p 0.9\
                                        --q 0.1;\
