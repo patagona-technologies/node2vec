@@ -51,6 +51,7 @@ class Graph:
         nodes = list(G.nodes())
         print("Walk iteration:")
         for walk_iter in range(num_walks):
+            mlflow.log_metric("value", walk_iter, walk_iter)
             print(str(walk_iter + 1), "/", str(num_walks))
             random.shuffle(nodes)
             for node in nodes:

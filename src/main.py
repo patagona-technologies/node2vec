@@ -144,10 +144,16 @@ def main(args):
     """
     mlflow.set_experiment("node2vec")
     with mlflow.start_run():
+        mlflow.log_param("num_walks", args.num_walks)
+        mlflow.log_param("walk_length", args.walk_length)
+        mlflow.log_param("directed", args.directed)
+        mlflow.log_param("p", args.p)
+        mlflow.log_param("q", args.q)
         nx_G = read_graph()
         G = node2vec.Graph(nx_G, args.directed, args.p, args.q)
         G.preprocess_transition_probs()
         walks = G.simulate_walks(args.num_walks, args.walk_length)
+
         learn_embeddings(walks)
 
 

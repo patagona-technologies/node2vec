@@ -4,9 +4,9 @@ FROM gcr.io/cp-0308b/node2vec-base-image:py3.6
 WORKDIR /root
 
 # Copies the trainer code to the docker image.
-COPY src /root
-COPY graph /root
-COPY emb /root
+COPY src /root/src
+COPY graph /root/graph
+COPY emb /root/emb
 COPY cp-0308b-3e8c3af931d6.json /root
 
 ENV MLFLOW_TRACKING_URI=https://mlflow-up3b2lt5ha-uw.a.run.app
