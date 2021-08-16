@@ -1,0 +1,5 @@
+#!/bin/bash
+
+IMAGE_URI=$(get-image-uri)
+
+docker push $IMAGE_URI
