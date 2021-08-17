@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Login to google container registry
+docker login -u _json_key -p "$(cat cp-0308b-ac0671669f20.json)" https://gcr.io
+
 IMAGE_URI=$(get-image-uri)
 
 docker push $IMAGE_URI

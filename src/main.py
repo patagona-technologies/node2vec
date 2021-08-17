@@ -1,11 +1,11 @@
 """
-Reference implementation of node2vec. 
+Reference implementation of node2vec.
 
 Author: Aditya Grover
 
 For more details, refer to the paper:
 node2vec: Scalable Feature Learning for Networks
-Aditya Grover and Jure Leskovec 
+Aditya Grover and Jure Leskovec
 Knowledge Discovery and Data Mining (KDD), 2016
 """
 
@@ -144,6 +144,7 @@ def main(args):
     """
     mlflow.set_experiment("node2vec")
     with mlflow.start_run():
+        mlflow.log_param("input", args.input)
         mlflow.log_param("num_walks", args.num_walks)
         mlflow.log_param("walk_length", args.walk_length)
         mlflow.log_param("directed", args.directed)
