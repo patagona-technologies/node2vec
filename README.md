@@ -16,6 +16,14 @@ It contains code demonstrating:
 - Using hyperparameter Tuning for training models
 - Using PyTorch to to train models
 
+## Setup
+
+The Dockerfile expects a `credentials.json` GCP service account key file with the correct roles to perform certain GCP operations. Specifically, it needs the following Roles:
+
+- Storage Object Viewer
+
+Ensure this file is placed in the project directory when building docker images.
+
 ## Usage
 
 To start a training **locally**, from the project directory, run:
