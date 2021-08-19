@@ -15,3 +15,25 @@ It contains code demonstrating:
 
 - Using hyperparameter Tuning for training models
 - Using PyTorch to to train models
+
+## Usage
+
+To start a training **locally**, from the project directory, run:
+
+```bash
+./scripts/train_local.sh
+```
+
+To start a training **on the cloud**, from the project directory, run:
+
+```bash
+./scripts/train_cloud.sh
+```
+
+To start a training on the cloud **with hyperparameter tuning**, from the project directory, run:
+
+```bash
+./scripts/train_hptuning.sh
+```
+
+hyperparameters to tune can be configured in `scripts/hptuning.yml`

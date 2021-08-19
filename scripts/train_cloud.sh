@@ -14,5 +14,3 @@ gcloud ai-platform jobs submit training $JOB_NAME \
        -- \
        --input=$INPUT_URI
 
-
-gcloud ai-platform jobs stream-logs ${JOB_NAME}
