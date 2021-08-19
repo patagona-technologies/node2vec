@@ -4,3 +4,4 @@ gensim==3.4.0
 mlflow
 google-cloud-storage
 cloudml-hypertune
+gcsfs

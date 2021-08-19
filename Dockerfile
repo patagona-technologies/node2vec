@@ -1,18 +1,19 @@
 # Specifies base image and tag
-FROM gcr.io/cp-0308b/node2vec-base-image:py3.6
+FROM python:3.6-buster
 
 WORKDIR /root
 
+COPY requirements.txt /root/requirements.txt
+RUN pip install -r /root/requirements.txt
+
 # Copies the trainer code to the docker image.
-COPY src /root/src
-COPY graph /root/graph
-COPY emb /root/emb
-COPY cp-0308b-3e8c3af931d6.json /root
+COPY trainer /root/trainer
+COPY credentials.json /root
 
 ENV MLFLOW_TRACKING_URI=https://mlflow-up3b2lt5ha-uw.a.run.app
 ENV MLFLOW_TRACKING_USERNAME=patagona
 ENV MLFLOW_TRACKING_PASSWORD=cp0308b-password-93784
-ENV GOOGLE_APPLICATION_CREDENTIALS=cp-0308b-3e8c3af931d6.json
+ENV GOOGLE_APPLICATION_CREDENTIALS=credentials.json
 
 # Sets up the entry point to invoke the trainer.
-ENTRYPOINT ["python", "src/main.py", "--input", "graph/karate.edgelist", "--output", "emb/karate.emd"]
+ENTRYPOINT ["python", "-m", "trainer.task"]

@@ -1,4 +1,0 @@
-#!/bin/bash
-
-IMAGE_URI=$(get-image-uri)
-docker run $IMAGE_URI

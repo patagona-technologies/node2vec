@@ -1,7 +1,0 @@
-#!/bin/bash
-
-IMAGE_URI=$(get-image-uri)
-JOB_NAME=job_$(date +%Y%m%d_%H%M%S)
-
-gcloud ai-platform jobs submit training $JOB_NAME \
-  --master-image-uri $IMAGE_URI \
