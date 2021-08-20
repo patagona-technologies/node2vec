@@ -38,7 +38,7 @@ To start a training **on the cloud**, from the project directory, run:
 ./scripts/train_cloud.sh
 ```
 
-To start a training on the cloud **with hyperparameter tuning**, from the project directory, run:
+To start a training **on the cloud with hyperparameter tuning**, from the project directory, run:
 
 ```bash
 ./scripts/train_hptuning.sh
