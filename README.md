@@ -11,7 +11,7 @@ It contains code demonstrating:
 - Using MLFlow for experiment tracking
 - Building Docker Images for training tasks
 
---- Not yet Implemented ---
+### Not yet implemented
 
 - Using hyperparameter Tuning for training models
 - Using PyTorch to to train models
